@@ -1,7 +1,22 @@
-.headerRow{
+.headerRow {
   max-width: 980px;
   margin: 0 auto;
-  .headerLogo{
+
+  .headerDivider {
+    height: 2.9em;
+    display: inline-block;
+  }
+
+  .headerMenu {
+    display: inline-block;
+    background: none;
+    border: none;
+    a{
+      color: white;
+    }
+  }
+
+  .headerLogo {
     text-align: center;
     margin-bottom: 0;
     color: white;
