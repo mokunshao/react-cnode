@@ -8,9 +8,16 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    .appMain{
-      flex:1;
-    }
-  }  
-}
 
+    .appMain {
+      flex: 1;
+      .contentWrapper {
+        max-width: 980px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-top: none;
+        display: flex;
+      }
+    }
+  }
+}

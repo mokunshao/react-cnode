@@ -15,7 +15,7 @@ class Nav extends Component<Props, {}> {
         theme='light'
         className={this.props.className}
       >
-        <Menu.Item><Link to='/index'><Icon type='home'/>首页</Link></Menu.Item>
+        <Menu.Item><Link to='/index/all'><Icon type='home'/>首页</Link></Menu.Item>
         <Menu.Item><Link to='/tutorial'><Icon type='book'/> 教程</Link></Menu.Item>
         <Menu.Item><Link to='/about'><Icon type='info-circle-o'/>关于</Link></Menu.Item>
       </Menu>

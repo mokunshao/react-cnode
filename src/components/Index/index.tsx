@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Row, Col } from "antd";
+import { Row, Col } from "antd";
 import "./index.scss";
 import IndexMenu from "../IndexMenu";
 import IndexList from "../IndexList";
