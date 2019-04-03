@@ -1,9 +1,8 @@
 import React from 'react'
+import {Layout} from "antd";
 
 export default function Footer() {
   return (
-    <div>
-      Footer
-    </div>
+    <Layout.Footer style={{textAlign:'center'}}>内容来自 cNode 社区</Layout.Footer>
   )
 }

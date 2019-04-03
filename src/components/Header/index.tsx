@@ -1,7 +1,8 @@
 import React from "react";
 import './Header.scss';
 import {Link} from 'react-router-dom';
-import {Layout, Row, Col, Divider, Menu, Icon} from 'antd';
+import {Layout, Row, Col, Divider, Menu, Icon, Dropdown, Button} from 'antd';
+import Nav from '../Nav';
 
 
 export default function Header() {
@@ -9,17 +10,24 @@ export default function Header() {
     <Layout.Header>
       <Row className="headerRow">
         <Col md={6} xs={24}>
-          <h1 className='headerLogo'>cNode</h1>
+          <h1 className='headerLogo'><Link to='/index'>cNode</Link></h1>
         </Col>
         <Col md={18} xs={0}>
           <Divider type="vertical" className='headerDivider'/>
-          <Menu mode='horizontal' theme='light' className='headerMenu'>
-            <Menu.Item><Link to='/index'><Icon type='home'/>首页</Link></Menu.Item>
-            <Menu.Item><Link to='/tutorial'><Icon type='book'/> 教程</Link></Menu.Item>
-            <Menu.Item><Link to='/about'><Icon type='info-circle-o'/>关于</Link></Menu.Item>
-          </Menu>
+          <Nav
+            mode='horizontal'
+            className='headerMenu'
+          />
+        </Col>
+        <Col md={0} xs={24} className='headerXsMenu'>
+          <Dropdown overlay={<Nav mode='vertical'/>} placement='bottomRight'>
+            <Button>
+              <Icon type='bars'/>
+            </Button>
+          </Dropdown>
         </Col>
       </Row>
+
     </Layout.Header>
   );
 }

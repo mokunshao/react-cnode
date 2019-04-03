@@ -11,14 +11,27 @@
     display: inline-block;
     background: none;
     border: none;
-    a{
+
+    a {
       color: white;
     }
+  }
+
+  .headerXsMenu {
+    position: absolute;
+    color: yellow;
+    right: 0;
+    width: auto;
   }
 
   .headerLogo {
     text-align: center;
     margin-bottom: 0;
-    color: white;
+    a{
+      color: white;
+      &:hover{
+        color: #1890ff;
+      }
+    }
   }
 }
