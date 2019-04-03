@@ -10,7 +10,7 @@ export default function Header() {
     <Layout.Header>
       <Row className="headerRow">
         <Col md={6} xs={24}>
-          <h1 className='headerLogo'><Link to='/index'>cNode</Link></h1>
+          <h1 className='headerLogo'>cNode</h1>
         </Col>
         <Col md={18} xs={0}>
           <Divider type="vertical" className='headerDivider'/>

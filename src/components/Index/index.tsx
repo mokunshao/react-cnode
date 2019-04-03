@@ -1,22 +1,26 @@
 import React, {Component} from "react";
 import {Menu, Row, Col} from 'antd';
-import {Link} from "react-router-dom";
 import "./index.scss";
+import IndexMenu from '../IndexMenu';
+import IndexList from '../IndexList'
 
-export default class Index extends Component {
+interface Props {
+  match: { params: string };
+}
+
+export default class Index extends Component<Props, {}> {
   render() {
+    console.log(this.props.match.params);
     return <Row className='contentWrapper'>
-      <Col md={6}>
-        <Menu className='indexMenu'>
-          <Menu.Item><Link to='/index/all'>全部</Link></Menu.Item>
-          <Menu.Item><Link to='/index/good'>精华</Link></Menu.Item>
-          <Menu.Item><Link to='/index/share'>分享</Link></Menu.Item>
-          <Menu.Item><Link to='/index/ask'>问答</Link></Menu.Item>
-          <Menu.Item><Link to='/index/job'>招聘</Link></Menu.Item>
-          <Menu.Item><Link to='/index/dev'>测试</Link></Menu.Item>
-        </Menu>
+      <Col md={6} xs={0}>
+        <IndexMenu className='indexMenu' mode='vertical'/>
       </Col>
-      <Col md={18} className='indexList' style={{height:'500px'}}>123</Col>
+      <Col md={0} xs={24}>
+        <IndexMenu className='indexMenu' mode='horizontal'/>
+      </Col>
+      <Col md={18} xs={24} className='indexList'>
+        <IndexList></IndexList>
+      </Col>
     </Row>;
   }
 }

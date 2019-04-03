@@ -3,11 +3,11 @@
   margin: 0 auto;
   border: 1px solid #ccc;
   border-top: none;
+  display: flex;
 
   .indexMenu {
     border-right: none;
     text-align: center;
-    justify-content: center;
 
     li {
       margin: 0;
@@ -30,27 +30,18 @@
 @media all and (max-width: 767px) {
   .contentWrapper {
     .indexMenu {
-      display: flex;
-      border-bottom: 1px solid #ccc;
 
-      & > li {
-        border: none;
+      li {
         border-right: none;
-        border-bottom: 3px solid transparent;
       }
 
-      & > li:hover, & > li.ant-menu-item-selected {
-        border-bottom-color: #1890ff;
+      li:hover, li.ant-menu-item-selected {
         background: none;
       }
     }
 
     .indexList {
       border-left: none;
-    }
-
-    .ant-menu-vertical .ant-menu-item:not(:last-child) {
-      margin: 0;
     }
   }
 
