@@ -7,9 +7,10 @@
   .indexMenu {
     border-right: none;
     text-align: center;
-justify-content: center;
+    justify-content: center;
+
     li {
-      margin: 0 !important;
+      margin: 0;
       border-right: 3px solid transparent;
     }
 
@@ -27,19 +28,30 @@ justify-content: center;
 
 
 @media all and (max-width: 767px) {
-  .indexMenu {
-    display: flex;
-    border-bottom: 1px solid #ccc;
+  .contentWrapper {
+    .indexMenu {
+      display: flex;
+      border-bottom: 1px solid #ccc;
 
-    & > li {
-      border: none;
-      border-right: none!important;
-      border-bottom: 3px solid transparent;
+      & > li {
+        border: none;
+        border-right: none;
+        border-bottom: 3px solid transparent;
+      }
+
+      & > li:hover, & > li.ant-menu-item-selected {
+        border-bottom-color: #1890ff;
+        background: none;
+      }
     }
 
-    & > li:hover, & > li.ant-menu-item-selected {
-      border-bottom-color: #1890ff;
-      background: none !important;
+    .indexList {
+      border-left: none;
+    }
+
+    .ant-menu-vertical .ant-menu-item:not(:last-child) {
+      margin: 0;
     }
   }
+
 }
