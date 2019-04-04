@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Tag } from "antd";
 
 interface Props {
+  top: boolean;
   good: boolean;
   tab: string;
-  top: boolean;
 }
 
 const tabConfig: any = {
