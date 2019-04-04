@@ -17,6 +17,13 @@
 
 .indexList {
   border-left: 1px solid #ccc;
+  .ant-list-item-action > li:first-child{
+    margin-left: 50px;
+  }
+  
+  .ant-list-item-meta-content{
+    min-width: 220px;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -35,3 +42,4 @@
     border-left: none;
   }
 }
+
