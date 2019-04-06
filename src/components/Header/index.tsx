@@ -1,11 +1,9 @@
 import React from "react";
 import './Header.scss';
-import {Link} from 'react-router-dom';
 import {Layout, Row, Col, Divider, Menu, Icon, Dropdown, Button} from 'antd';
 import Nav from '../Nav';
 
-
-export default function Header() {
+function Header() {
   return (
     <Layout.Header>
       <Row className="headerRow">
@@ -31,3 +29,5 @@ export default function Header() {
     </Layout.Header>
   );
 }
+
+export default Header;

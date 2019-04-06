@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Tag } from "antd";
+import React from "react";
+import {Tag} from "antd";
 
 interface Props {
   top: boolean;
@@ -38,12 +38,10 @@ function getTab(top: boolean, good: boolean, tab: string): string {
   return top ? "top" : good ? "good" : tab;
 }
 
-class TextTag extends Component<Props, {}> {
-  render() {
-    const nowTab =
-      tabConfig[getTab(this.props.top, this.props.good, this.props.tab)];
-    return <Tag color={nowTab.color}>{nowTab.text}</Tag>;
-  }
+function TextTag(props: Props) {
+  const nowTab =
+    tabConfig[getTab(props.top, props.good, props.tab)];
+  return <Tag color={nowTab.color}>{nowTab.text}</Tag>;
 }
 
 export default TextTag;

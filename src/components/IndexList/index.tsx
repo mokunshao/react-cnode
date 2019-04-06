@@ -1,17 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import { List, Avatar } from "antd";
 import { Link } from "react-router-dom";
 import data from "./data.json";
 import TextTag from "../TextTag";
+
 interface Props {
   className: string;
 }
-class IndexList extends Component<Props, {}> {
-  render() {
-    console.log(data);
+
+function IndexList(props:Props) {
     return (
       <List
-        className={this.props.className}
+        className={props.className}
         loading={false}
         dataSource={data.data}
         renderItem={item => (
@@ -46,6 +46,5 @@ class IndexList extends Component<Props, {}> {
       />
     );
   }
-}
 
 export default IndexList;

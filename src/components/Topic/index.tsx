@@ -27,7 +27,7 @@ export default class Topic extends Component {
         >
           <div dangerouslySetInnerHTML={{ __html: data.data.content }} />
         </Card>
-        <Card loading={false} title={"条回复"} type="inner">
+        <Card loading={false} title={data.data.reply_count+"条回复"} type="inner">
           <List
             dataSource={data.data.replies}
             renderItem={item => (

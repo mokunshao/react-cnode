@@ -1,7 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import {Avatar, Col, Row} from "antd";
+import data from "./data";
+import "./user.scss";
+import UserInfoList from '../UserInfoList';
 
-export default class User extends Component {
-  render() {
-    return <div>user</div>;
-  }
+function User() {
+  return (
+    <div className="contentWrapper" style={{flexDirection: 'column'}}>
+      <Avatar src={data.data.avatar_url} className="userAvatar"/>
+      <Row className='userInfo'>
+        <Col md={8}>用户名:{data.data.loginname}</Col>
+        <Col md={8}>积分:{data.data.score}</Col>
+        <Col md={8}>注册时间:{data.data.create_at.split('T')[0]}</Col>
+      </Row>
+      <UserInfoList type='inner'/>
+      <UserInfoList type='inner'/>
+    </div>
+  );
 }
+
+export default User;
