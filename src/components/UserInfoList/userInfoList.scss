@@ -1,0 +1,16 @@
+.userInfoList {
+  .ant-list-item {
+    padding: 10px;
+
+    .username {
+      padding: 0 6px;
+    }
+
+    time {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      word-break: keep-all;
+    }
+  }
+}

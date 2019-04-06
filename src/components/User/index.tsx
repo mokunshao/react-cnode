@@ -13,8 +13,8 @@ function User() {
         <Col md={8}>积分:{data.data.score}</Col>
         <Col md={8}>注册时间:{data.data.create_at.split('T')[0]}</Col>
       </Row>
-      <UserInfoList type='inner'/>
-      <UserInfoList type='inner'/>
+      <UserInfoList type='inner' loading={false} title={'最近创建的话题'} data={data.data.recent_topics}/>
+      <UserInfoList type='inner' loading={false} title={'最近回复的话题'} data={data.data.recent_replies}/>
     </div>
   );
 }
