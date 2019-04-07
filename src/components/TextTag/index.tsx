@@ -39,9 +39,13 @@ function getTab(top: boolean, good: boolean, tab: string): string {
 }
 
 function TextTag(props: Props) {
-  const nowTab =
-    tabConfig[getTab(props.top, props.good, props.tab)];
-  return <Tag color={nowTab.color}>{nowTab.text}</Tag>;
+  if(props.tab){
+    const nowTab =
+      tabConfig[getTab(props.top, props.good, props.tab)];
+    return <Tag color={nowTab.color}>{nowTab.text}</Tag>;
+  }else{
+    return <Tag>主题</Tag> 
+  }
 }
 
 export default TextTag;

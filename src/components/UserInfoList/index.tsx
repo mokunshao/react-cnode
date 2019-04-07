@@ -11,7 +11,6 @@ interface Props {
 }
 
 function UserInfoList(props: Props) {
-  console.log(props.data);
   return (
     <div className={'userInfoList'}>
       <Card type={props.type} loading={props.loading} title={props.title}/>

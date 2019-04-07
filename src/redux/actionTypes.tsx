@@ -1,0 +1,4 @@
+export default {
+  UPDATE_LIST:"UPDATE_LIST",
+  UPDATING:"UPDATING"
+}
