@@ -1,23 +1,45 @@
-import React from 'react';
-import {Menu} from "antd";
-import {Link} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Menu } from "antd";
+import { Link, withRouter } from "react-router-dom";
+import Item from "antd/lib/list/Item";
 
 interface Props {
   className: string;
   mode: any;
+  section: string;
 }
 
-function IndexMenu(props:Props) {
+const section = [
+  { text: "全部", tab: "all" },
+  { text: "精华", tab: "good" },
+  { text: "分享", tab: "share" },
+  { text: "问答", tab: "ask" },
+  { text: "工作", tab: "job" },
+  { text: "测试", tab: "dev" }
+];
+
+function IndexMenu(props: Props) {
   return (
-    <Menu className={props.className} mode={props.mode}>
-      <Menu.Item><Link to='/index/all'>全部</Link></Menu.Item>
-      <Menu.Item><Link to='/index/good'>精华</Link></Menu.Item>
-      <Menu.Item><Link to='/index/share'>分享</Link></Menu.Item>
-      <Menu.Item><Link to='/index/ask'>问答</Link></Menu.Item>
-      <Menu.Item><Link to='/index/job'>招聘</Link></Menu.Item>
-      <Menu.Item><Link to='/index/dev'>测试</Link></Menu.Item>
+    <Menu
+      className={props.className}
+      mode={props.mode}
+      selectedKeys={[props.section]}
+    >
+      {section.map(item => (
+        <Menu.Item key={item.tab}>
+          <Link to={"/index/" + item.tab}>{item.text}</Link>
+        </Menu.Item>
+      ))}
     </Menu>
   );
 }
 
-export default IndexMenu;
+export default withRouter((props: any) => {
+  return (
+    <IndexMenu
+      className={props.className}
+      mode={props.mode}
+      section={props.match.params.section}
+    />
+  );
+});
