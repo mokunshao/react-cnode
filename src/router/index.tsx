@@ -14,7 +14,7 @@ export default class RouterIndex extends Component {
         <Redirect exact from="/index" to="/index/all" />
         <Route path="/index/:section" component={Index} />
         <Route path="/about" component={About} />
-        <Route path="/user" component={User} />
+        <Route path="/user/:loginname" component={User} />
         <Route path="/topic/:id" component={Topic} />
         <Route path="/tutorial" component={Tutorial} />
         <Route component={Index} />
