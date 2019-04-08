@@ -2,13 +2,8 @@ import actionTypes from "../actionTypes";
 
 interface Action {
   type: string;
-  data?: any;
+  data: any;
 }
-
-// interface State {
-//   loading: boolean;
-//   data: any[];
-// }
 
 const initialState = {
   loading: true,
