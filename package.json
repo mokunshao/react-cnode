@@ -38,5 +38,6 @@
   ],
   "devDependencies": {
     "babel-plugin-import": "^1.11.0"
-  }
+  },
+  "homepage": "https://mokunshao.github.io/react-cnode/build"
 }
