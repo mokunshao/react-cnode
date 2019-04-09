@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { List, Avatar } from "antd";
 import { Link } from "react-router-dom";
-// import data from "./data.json";
 import TextTag from "../TextTag";
 import { connect } from "react-redux";
 import { updateList } from "../../redux/actions";
@@ -25,11 +24,25 @@ interface Props {
 }
 
 function IndexList(props: Props) {
+  const [page, setPage] = useState(1);
   useEffect(() => {
-    props.updateList(props.section, 1);
+    props.updateList(props.section, page);
+  }, [page]);
+  useEffect(() => {
+    setPage(1);
+    props.updateList(props.section, page);
   }, [props.section]);
+  let pagination = {
+    current: page,
+    pageSize: 10,
+    total: 100,
+    onChange: (current: any) => {
+      setPage(current);
+    }
+  };
   return (
     <List
+      pagination={pagination}
       className={props.className}
       loading={props.loading}
       dataSource={props.data}

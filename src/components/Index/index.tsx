@@ -11,11 +11,12 @@ function Index(props: any) {
       <Col md={6} xs={0}>
         <IndexMenu className="indexMenu" mode="vertical" />
       </Col>
-      <Col md={0} xs={24}>
-        <IndexMenu className="indexMenu" mode="horizontal" />
-        <IndexList className="indexList" section={props.match.params.section} />
-      </Col>
-      <Col md={18} xs={0}>
+      <Col md={18} xs={24}>
+        <Row>
+          <Col md={0} xs={24}>
+            <IndexMenu className="indexMenu" mode="horizontal" />
+          </Col>
+        </Row>
         <IndexList className="indexList" section={props.match.params.section} />
       </Col>
     </Row>
