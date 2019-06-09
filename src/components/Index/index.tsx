@@ -5,7 +5,7 @@ import IndexMenu from "../IndexMenu";
 import IndexList from "../IndexList";
 
 function Index(props: any) {
-  window.scrollTo && window.scrollTo(0, 0);
+    window.scrollTo && window.scrollTo(0, 0);
   return (
     <Row className="contentWrapper">
       <Col md={6} xs={0}>

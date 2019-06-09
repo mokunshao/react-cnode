@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Card, Avatar, List } from "antd";
-import data from "./data";
 import TextTag from "../TextTag";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -34,10 +33,9 @@ interface Props {
 
 function Topic(props: Props) {
   window.scrollTo && window.scrollTo(0, 0);
-  console.log(11);
   let title = (
     <div>
-      <h1>{props.data.title}</h1>
+      <h1 style={{whiteSpace:'normal'}}>{props.data.title}</h1>
       <TextTag
         top={props.data.top}
         good={props.data.good}

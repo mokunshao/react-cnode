@@ -27,6 +27,7 @@ function IndexList(props: Props) {
   const [page, setPage] = useState(1);
   useEffect(() => {
     props.updateList(props.section, page);
+    window.scrollTo && window.scrollTo(0, 0);
   }, [page]);
   useEffect(() => {
     setPage(1);

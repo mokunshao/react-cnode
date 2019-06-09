@@ -7,8 +7,9 @@ import { updateUser } from "../../redux/actions";
 
 function User(props: any) {
   useEffect(() => {
-    props.updateUser(props.match.params.loginname)
-  }, []);
+    props.updateUser(props.match.params.loginname);
+    window.scrollTo && window.scrollTo(0, 0);
+  }, [props.match.params.loginname]);
   return (
     <div className="contentWrapper" style={{ flexDirection: "column" }}>
       <Avatar src={props.data.avatar_url} className="userAvatar" />
